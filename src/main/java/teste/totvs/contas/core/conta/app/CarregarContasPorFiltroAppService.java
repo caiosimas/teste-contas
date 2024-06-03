@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import teste.totvs.contas.core.conta.CarregarContasPorFiltrosUseCase;
 import teste.totvs.contas.core.conta.domain.ContaDomainRepository;
+import teste.totvs.contas.core.infra.JwtAppService;
 
 import java.util.List;
 
@@ -18,7 +19,8 @@ public class CarregarContasPorFiltroAppService implements CarregarContasPorFiltr
                 carregarContasPorFiltroCommand.dataVencimentoInicial(),
                 carregarContasPorFiltroCommand.dataVencimentoFinal(),
                 carregarContasPorFiltroCommand.descricao(),
-                carregarContasPorFiltroCommand.pageable()
+                carregarContasPorFiltroCommand.pageable(),
+                JwtAppService.carregarUserID()
         );
     }
 

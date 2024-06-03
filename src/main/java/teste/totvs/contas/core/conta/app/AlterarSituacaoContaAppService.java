@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import teste.totvs.contas.core.conta.AlterarSituacaoContaUseCase;
 import teste.totvs.contas.core.conta.domain.ContaDomainRepository;
 import teste.totvs.contas.core.conta.domain.enums.SituacaoContaEnum;
+import teste.totvs.contas.core.infra.JwtAppService;
 
 @Service
 @Transactional
@@ -15,7 +16,7 @@ public class AlterarSituacaoContaAppService implements AlterarSituacaoContaUseCa
 
     @Override
     public void handle(AlterarSituacaoContaUseCase.AlterarSituacaoContaCommand alterarSituacaoContaCommand) {
-        this.contaDomainRepository.findById(alterarSituacaoContaCommand.id()).ifPresent(conta -> {
+        this.contaDomainRepository.findById(alterarSituacaoContaCommand.id(), JwtAppService.carregarUserID()).ifPresent(conta -> {
             if (conta.getSituacaoConta() != null && conta.getSituacaoConta().equals(alterarSituacaoContaCommand.situacaoConta())) {
                 return;
             }

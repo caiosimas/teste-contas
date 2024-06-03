@@ -5,8 +5,8 @@ import teste.totvs.contas.core.conta.AlterarSituacaoContaUseCase;
 import teste.totvs.contas.core.conta.AtualizarContaUseCase;
 import teste.totvs.contas.core.conta.CadastrarContaUseCase;
 import teste.totvs.contas.core.conta.adapter.in.api.dto.CadastrarContaCSV;
-import teste.totvs.contas.core.conta.adapter.in.api.dto.CadastrarContaDTO;
 import teste.totvs.contas.core.conta.domain.enums.SituacaoContaEnum;
+import teste.totvs.contas.core.infra.JwtAppService;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -29,6 +29,8 @@ public class Conta {
 
     private Double valor;
 
+    private UUID userID;
+
     public static Conta cadastrarConta(CadastrarContaUseCase.CadastrarContaCommand cadastrarContaCommand) {
         Conta conta = new Conta();
         conta.id = UUID.randomUUID();
@@ -37,6 +39,7 @@ public class Conta {
         conta.descricao = cadastrarContaCommand.descricao();
         conta.situacaoConta = cadastrarContaCommand.situacaoContaEnum();
         conta.valor = cadastrarContaCommand.valor();
+        conta.userID = JwtAppService.carregarUserID();
 
         return conta;
     }
@@ -49,11 +52,12 @@ public class Conta {
         conta.descricao = cadastrarContaCSV.getDescricao();
         conta.situacaoConta = cadastrarContaCSV.getSituacaoContaEnum();
         conta.valor = cadastrarContaCSV.getValor();
+        conta.userID = JwtAppService.carregarUserID();
 
         return conta;
     }
 
-    public Conta atualziarConta(AtualizarContaUseCase.AtualizarContaCommand atualizarContaCommand) {
+    public Conta atualizarConta(AtualizarContaUseCase.AtualizarContaCommand atualizarContaCommand) {
         this.dataVencimento = atualizarContaCommand.dataVencimento();
         this.dataPagamento = atualizarContaCommand.dataPagamento();
         this.descricao = atualizarContaCommand.descricao();

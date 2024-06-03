@@ -13,11 +13,11 @@ public interface ContaDomainRepository {
 
     Conta save(Conta conta);
 
-    Optional<Conta> findById(UUID id);
+    Optional<Conta> findById(UUID id, UUID userID);
 
-    CarregarContaPorIdUseCase.ContaProjection findContaDTOById(UUID id);
+    CarregarContaPorIdUseCase.ContaProjection findContaDTOById(UUID id, UUID userID);
 
-    Double carergarValorPagoPorPeriodo(LocalDateTime dataInicial, LocalDateTime dataFinal);
+    Double carergarValorPagoPorPeriodo(LocalDateTime dataInicial, LocalDateTime dataFinal, UUID userID);
 
-    List<CarregarContasPorFiltrosUseCase.ContaProjection> findByFilters(LocalDateTime vencimentoInicial, LocalDateTime vencimentoFinal, String descricao, Pageable pageable);
+    List<CarregarContasPorFiltrosUseCase.ContaProjection> findByFilters(LocalDateTime vencimentoInicial, LocalDateTime vencimentoFinal, String descricao, Pageable pageable, UUID userID);
 }

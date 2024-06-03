@@ -12,6 +12,8 @@ import teste.totvs.contas.core.auth.domain.AuthDomainRepository;
 import teste.totvs.contas.core.auth.exception.SenhaInvalidaException;
 import teste.totvs.contas.core.infra.JwtAppService;
 
+import java.util.UUID;
+
 @Service
 public class AutenticarAppService implements AutenticarUseCase {
 
@@ -33,7 +35,7 @@ public class AutenticarAppService implements AutenticarUseCase {
 
         return User
                 .builder()
-                .username(authProjetion.getUsername())
+                .username(authProjetion.getId().toString())
                 .password(authProjetion.getPassword())
                 .build();
     }
@@ -42,6 +44,16 @@ public class AutenticarAppService implements AutenticarUseCase {
         boolean senhaExistente = encoder.matches(command.senha(), user.getPassword());
 
         if (!senhaExistente) throw new SenhaInvalidaException();
+    }
+
+    public UserDetails loadUserById(UUID id) throws UsernameNotFoundException {
+        AuthProjection authProjetion = this.authDomainRepository.findByid(id);
+
+        return User
+                .builder()
+                .username(authProjetion.getId().toString())
+                .password(authProjetion.getPassword())
+                .build();
     }
 
     @Autowired

@@ -13,6 +13,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import teste.totvs.contas.core.auth.app.AutenticarAppService;
 
 import java.io.IOException;
+import java.util.UUID;
 
 public class JwtAuthFilter extends OncePerRequestFilter {
 
@@ -40,7 +41,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             if (isValid) {
 
                 String loginUsuario = this.jwtAppServive.obterLoginUsuario(token);
-                UserDetails usuario = this.autenticarAppService.loadUserByUsername(loginUsuario);
+                UserDetails usuario = this.autenticarAppService.loadUserById(UUID.fromString(loginUsuario));
 
                 UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
                         User.builder()

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import teste.totvs.contas.core.conta.CarregarValorPagoPorPeriodoUseCase;
 import teste.totvs.contas.core.conta.domain.ContaDomainRepository;
+import teste.totvs.contas.core.infra.JwtAppService;
 
 @Service
 public class CarregarValorPagoPorPeriodoAppService implements CarregarValorPagoPorPeriodoUseCase {
@@ -12,7 +13,7 @@ public class CarregarValorPagoPorPeriodoAppService implements CarregarValorPagoP
 
     @Override
     public Double handle(CarregarValorPorPeriodoCommand carregarValorPorPeriodoCommand) {
-        return this.contaDomainRepository.carergarValorPagoPorPeriodo(carregarValorPorPeriodoCommand.dataInicial(), carregarValorPorPeriodoCommand.dataFinal());
+        return this.contaDomainRepository.carergarValorPagoPorPeriodo(carregarValorPorPeriodoCommand.dataInicial(), carregarValorPorPeriodoCommand.dataFinal(), JwtAppService.carregarUserID());
     }
 
     @Autowired

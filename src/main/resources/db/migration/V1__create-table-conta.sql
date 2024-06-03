@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS conta (
     descricao VARCHAR(500),
     situacao_conta SMALLINT,
     valor numeric(10, 2),
+    userID UUID,
 
     CONSTRAINT pk_conta PRIMARY KEY (id)
 );

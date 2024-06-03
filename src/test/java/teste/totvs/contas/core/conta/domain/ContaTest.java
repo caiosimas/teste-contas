@@ -69,7 +69,7 @@ public class ContaTest {
                 conta.getId(), DATA_VENCIMENTO, DATA_PAGAMENTO, DESCRICAO, SITUACAO_CONTA, novoValor
         );
 
-        conta.atualziarConta(atualizarContaCommand);
+        conta.atualizarConta(atualizarContaCommand);
 
         assertAll("Verifica se todos os atributos foram relacionados com sucesso",
                 () -> assertEquals(DATA_VENCIMENTO, conta.getDataVencimento()),

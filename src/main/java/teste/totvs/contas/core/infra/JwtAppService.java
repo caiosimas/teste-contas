@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.Date;
+import java.util.UUID;
 
 @Service
 public class JwtAppService {
@@ -51,5 +53,17 @@ public class JwtAppService {
                 .setSigningKey(CHAVE_ASSINATURA)
                 .parseClaimsJws(token)
                 .getBody();
+    }
+
+    public static UUID carregarUserID() {
+        if (SecurityContextHolder.getContext().getAuthentication() != null &&
+                SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof UserDetails) {
+
+            String UUIDStr = ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
+
+            return UUID.fromString(UUIDStr);
+        }
+
+        return null;
     }
 }
