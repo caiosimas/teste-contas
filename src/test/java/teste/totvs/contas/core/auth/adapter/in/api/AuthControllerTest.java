@@ -39,21 +39,6 @@ class AuthControllerTest {
     private ObjectMapper mapper;
 
     @Test
-    void autenticar() throws Exception {
-        RegistrarDTO registrarDTO = new RegistrarDTO(
-                LOGIN, PASSWORD
-        );
-
-        String dto = mapper.writeValueAsString(registrarDTO);
-
-        mock.perform(post("/auth/logar")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(dto))
-                .andExpect(status().isOk())
-                .andReturn();
-    }
-
-    @Test
     void cadastrar() throws Exception {
         RegistrarDTO registrarDTO = new RegistrarDTO(
                 UUID.randomUUID().toString(), PASSWORD

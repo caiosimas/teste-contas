@@ -5,8 +5,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.MediaType;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import teste.totvs.contas.core.conta.adapter.in.api.dto.AtualizarContaDTO;
 import teste.totvs.contas.core.conta.adapter.in.api.dto.CadastrarContaDTO;
 import teste.totvs.contas.core.conta.domain.enums.SituacaoContaEnum;
@@ -101,5 +104,18 @@ public class ContaControllerTest {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andReturn();
+    }
+
+    @Test
+    void importarContas() throws Exception {
+        MockMultipartFile mockMultipartFile = new MockMultipartFile(
+                "file",
+                "csv-examplo-gerar-contas.csv",
+                "application/x-csv",
+                new ClassPathResource("csv-examplo-gerar-contas.csv").getInputStream());
+
+        mock.perform(MockMvcRequestBuilders.multipart("/ws-api/conta/importar-contas")
+                        .file(mockMultipartFile))
+                .andExpect(status().isOk());
     }
 }
