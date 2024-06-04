@@ -14,7 +14,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJDYWlvIiwiZXhwIjoxNzE3NTg4NjU1fQ.0wlrCQJwMEeUAq6N6Z5TwD9kmjWYRQ5A5T2eMnR3udwBcqxbTZzhDtWBmgSUIA93qR3qr4p-25le1S1GDT4rzg",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0OGVmYzZmZi1mYjhkLTQyMjUtYWZlMC1iY2M2NDA0NmZjODUiLCJleHAiOjE3MTc2MzE5Nzh9.e2zKztNIsm9Ar2zCFBaFwz2Cjs-TF_tkYYxjeb18b7cOr6edNy5jvDLxnMZLAeBhYds6llVJB3pSlTOZQ8rH2w",
 							"type": "string"
 						}
 					]
@@ -51,7 +51,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5ZGZmZmMyOC03OTQ5LTQ0NmMtYWFlYS0zOTk1NDA1NDgyM2UiLCJleHAiOjE3MTc1OTk4Nzl9.ep8sm72o93j91N1xkaf_AOUmWSLwuztLOlDn5u7eW1BSr-akvhFgkybFXOtW-_oE01GM9k57JkUjtfNM05sCaw",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0OGVmYzZmZi1mYjhkLTQyMjUtYWZlMC1iY2M2NDA0NmZjODUiLCJleHAiOjE3MTc2MzE5Nzh9.e2zKztNIsm9Ar2zCFBaFwz2Cjs-TF_tkYYxjeb18b7cOr6edNy5jvDLxnMZLAeBhYds6llVJB3pSlTOZQ8rH2w",
 							"type": "string"
 						}
 					]
@@ -59,14 +59,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/ws-api/conta/d82ca339-38dc-492c-9e05-76d54f7550dd",
+					"raw": "{{base_url}}/ws-api/conta/fe42ba1c-9f8f-403b-9fac-c73090f84304",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
 						"ws-api",
 						"conta",
-						"d82ca339-38dc-492c-9e05-76d54f7550dd"
+						"fe42ba1c-9f8f-403b-9fac-c73090f84304"
 					],
 					"query": [
 						{
@@ -87,7 +87,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5ZGZmZmMyOC03OTQ5LTQ0NmMtYWFlYS0zOTk1NDA1NDgyM2UiLCJleHAiOjE3MTc1OTk4Nzl9.ep8sm72o93j91N1xkaf_AOUmWSLwuztLOlDn5u7eW1BSr-akvhFgkybFXOtW-_oE01GM9k57JkUjtfNM05sCaw",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0OGVmYzZmZi1mYjhkLTQyMjUtYWZlMC1iY2M2NDA0NmZjODUiLCJleHAiOjE3MTc2MzE5Nzh9.e2zKztNIsm9Ar2zCFBaFwz2Cjs-TF_tkYYxjeb18b7cOr6edNy5jvDLxnMZLAeBhYds6llVJB3pSlTOZQ8rH2w",
 							"type": "string"
 						}
 					]
@@ -96,7 +96,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": \"d82ca339-38dc-492c-9e05-76d54f7550dd\",\n    \"situacaoContaEnum\": \"ABERTA\",\n    \"dataVencimento\": \"2024-06-03T12:30:45\",\n    \"dataPagamento\": null,\n    \"descricao\": \"Conta de faculdade\",\n    \"valor\": 30.5\n}",
+					"raw": "{\n    \"id\": \"fe42ba1c-9f8f-403b-9fac-c73090f84304\",\n    \"situacaoContaEnum\": \"PAGA\",\n    \"dataVencimento\": \"2024-06-03T12:30:45\",\n    \"dataPagamento\": null,\n    \"descricao\": \"Conta de faculdade\",\n    \"valor\": 10.5\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -124,7 +124,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJDYWlvIiwiZXhwIjoxNzE3NTg4NjU1fQ.0wlrCQJwMEeUAq6N6Z5TwD9kmjWYRQ5A5T2eMnR3udwBcqxbTZzhDtWBmgSUIA93qR3qr4p-25le1S1GDT4rzg",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0OGVmYzZmZi1mYjhkLTQyMjUtYWZlMC1iY2M2NDA0NmZjODUiLCJleHAiOjE3MTc2MzE5Nzh9.e2zKztNIsm9Ar2zCFBaFwz2Cjs-TF_tkYYxjeb18b7cOr6edNy5jvDLxnMZLAeBhYds6llVJB3pSlTOZQ8rH2w",
 							"type": "string"
 						}
 					]
@@ -133,7 +133,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": \"d82ca339-38dc-492c-9e05-76d54f7550dd\",\n    \"situacaoContaEnum\": \"PAGA\"\n}",
+					"raw": "{\n    \"id\": \"fe42ba1c-9f8f-403b-9fac-c73090f84304\",\n    \"situacaoContaEnum\": \"PAGA\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -161,7 +161,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJDYWlvIiwiZXhwIjoxNzE3NTg4NjU1fQ.0wlrCQJwMEeUAq6N6Z5TwD9kmjWYRQ5A5T2eMnR3udwBcqxbTZzhDtWBmgSUIA93qR3qr4p-25le1S1GDT4rzg",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0OGVmYzZmZi1mYjhkLTQyMjUtYWZlMC1iY2M2NDA0NmZjODUiLCJleHAiOjE3MTc2MzE5Nzh9.e2zKztNIsm9Ar2zCFBaFwz2Cjs-TF_tkYYxjeb18b7cOr6edNy5jvDLxnMZLAeBhYds6llVJB3pSlTOZQ8rH2w",
 							"type": "string"
 						}
 					]
@@ -169,7 +169,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/ws-api/conta/carregar-contas?descricao=TESTEA&data-vencimento-final=2024-06-05T12:30:45&data-vencimento-inicial=2024-06-01T12:30:45",
+					"raw": "{{base_url}}/ws-api/conta/carregar-contas?data-vencimento-final=2024-06-05T12:30:45&data-vencimento-inicial=2024-06-01T12:30:45&pagina=1",
 					"host": [
 						"{{base_url}}"
 					],
@@ -181,7 +181,8 @@
 					"query": [
 						{
 							"key": "descricao",
-							"value": "TESTEA"
+							"value": "faculdade",
+							"disabled": true
 						},
 						{
 							"key": "data-vencimento-final",
@@ -190,6 +191,10 @@
 						{
 							"key": "data-vencimento-inicial",
 							"value": "2024-06-01T12:30:45"
+						},
+						{
+							"key": "pagina",
+							"value": "1"
 						}
 					]
 				}
@@ -204,7 +209,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJDYWlvIiwiZXhwIjoxNzE3NTg4NjU1fQ.0wlrCQJwMEeUAq6N6Z5TwD9kmjWYRQ5A5T2eMnR3udwBcqxbTZzhDtWBmgSUIA93qR3qr4p-25le1S1GDT4rzg",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0OGVmYzZmZi1mYjhkLTQyMjUtYWZlMC1iY2M2NDA0NmZjODUiLCJleHAiOjE3MTc2MzE5Nzh9.e2zKztNIsm9Ar2zCFBaFwz2Cjs-TF_tkYYxjeb18b7cOr6edNy5jvDLxnMZLAeBhYds6llVJB3pSlTOZQ8rH2w",
 							"type": "string"
 						}
 					]
@@ -242,7 +247,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"login\": \"CaioSIMAS2\",\n    \"senha\": 123\n}",
+					"raw": "{\n    \"login\": \"CAIOSIMAS\",\n    \"senha\": 123\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -269,7 +274,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"login\": \"Caio\",\n    \"senha\": 123\n}",
+					"raw": "{\n    \"login\": \"CAIOSIMAS\",\n    \"senha\": 123\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -297,7 +302,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJDYWlvIiwiZXhwIjoxNzE3NTg4NjU1fQ.0wlrCQJwMEeUAq6N6Z5TwD9kmjWYRQ5A5T2eMnR3udwBcqxbTZzhDtWBmgSUIA93qR3qr4p-25le1S1GDT4rzg",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0OGVmYzZmZi1mYjhkLTQyMjUtYWZlMC1iY2M2NDA0NmZjODUiLCJleHAiOjE3MTc2MzE5Nzh9.e2zKztNIsm9Ar2zCFBaFwz2Cjs-TF_tkYYxjeb18b7cOr6edNy5jvDLxnMZLAeBhYds6llVJB3pSlTOZQ8rH2w",
 							"type": "string"
 						}
 					]
@@ -310,7 +315,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/home/caiosimas/Downloads/Teste CSV - Página1 (1).csv"
+							"src": "/home/caiosimas/Downloads/Teste CSV - Página1.csv"
 						}
 					]
 				},
