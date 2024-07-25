@@ -70,6 +70,10 @@ public class Conta {
     public Conta atualizarSituacaoConta(AlterarSituacaoContaUseCase.AlterarSituacaoContaCommand alterarSituacaoContaCommand) {
         this.situacaoConta = alterarSituacaoContaCommand.situacaoConta();
 
+        if (SituacaoContaEnum.PAGA.equals(alterarSituacaoContaCommand.situacaoConta())) {
+            this.atualizarDataPagamento();
+        }
+
         return this;
     }
 

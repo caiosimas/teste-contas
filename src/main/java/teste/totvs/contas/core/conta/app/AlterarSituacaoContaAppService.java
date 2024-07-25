@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import teste.totvs.contas.core.conta.AlterarSituacaoContaUseCase;
 import teste.totvs.contas.core.conta.domain.ContaDomainRepository;
-import teste.totvs.contas.core.conta.domain.enums.SituacaoContaEnum;
 import teste.totvs.contas.core.infra.JwtAppService;
 
 @Service
@@ -19,10 +18,6 @@ public class AlterarSituacaoContaAppService implements AlterarSituacaoContaUseCa
         this.contaDomainRepository.findById(alterarSituacaoContaCommand.id(), JwtAppService.carregarUserID()).ifPresent(conta -> {
             if (conta.getSituacaoConta() != null && conta.getSituacaoConta().equals(alterarSituacaoContaCommand.situacaoConta())) {
                 return;
-            }
-
-            if (SituacaoContaEnum.PAGA.equals(alterarSituacaoContaCommand.situacaoConta())) {
-                conta.atualizarDataPagamento();
             }
 
             this.contaDomainRepository.save(conta.atualizarSituacaoConta(alterarSituacaoContaCommand));
