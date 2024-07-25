@@ -10,9 +10,6 @@ class ContasApplicationTests {
 
 	@Test
 	void contextLoads() {
-		ContasApplication.main(new String[]{});
-		Boolean aTrue = Boolean.TRUE;
-		assertTrue(aTrue);
 	}
 
 }

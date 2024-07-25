@@ -10,6 +10,7 @@
  - O CSV de exemplo para importação das contas está dentro da pasta resources
  - Para subir o projeto é necessário digitar docker-compose up
  - Endpoints que tem no caminho "ws-api" são autenticados e para isto precisam de um token Bearer para consumir
+ - Para rodar os testes unitario é necessario estar com o banco em pé
 
 ## ENDPOINTS
  - Existem 9 ENDPOINTS, o modelo do body deve ser seguido como está na coleção
