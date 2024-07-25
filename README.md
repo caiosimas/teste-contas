@@ -37,7 +37,7 @@
      - data-vencimento-inicial - Data inicial
      - data-vencimento-final - Data final
      - descricao - A descricao da conta com LIKE no começo e final (%EXEMPLO_DESCRICAO%)
-     - pagina - A pagina que vai carregar
+     - pagina - A pagina que vai carregar (Lembrando que primeira pagina é 0)
      - maximo-por-pagina - A quantidade por pagina
 
 ## CONTATO
