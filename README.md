@@ -1,0 +1,5 @@
+ - Para subir a aplicação é só entrar na pasta do projeto e digitar "docker-compose up"
+ - Existe apenas uma regra de negócio (Ao atualizar a situação da conta e mandar o status como PAGO ele irá adicionar uma data de pagamento)
+ - 82% de covarage
+ - A aplicação tem sistema de autentição, então antes de começar a usar os endpoints é valido criar uma conta no endpoint de cadastro e recuperar o token JWT no de login
+ - Para testar o endpoint de importação via CSV o CSV deve seguir o modelo que está no projeto dentro da pasta resources
